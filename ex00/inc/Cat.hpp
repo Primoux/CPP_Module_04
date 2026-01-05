@@ -1,12 +1,21 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 16:08:11 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/05 16:08:16 by enchevri         ###   ########lyon.fr   */
-/*                                                                            */
-/* ************************************************************************** */
+#include "Animal.hpp"
+#include <ostream>
 
+class Cat : Animal
+{
+  private:
+	
+
+  public:
+	// CONSTRUCTOR
+	Cat();
+	~Cat();
+	Cat(Cat const &original);
+
+	// OPERATOR
+	Cat &operator=(const Cat &other);
+
+	//MEMBER FUNCTION
+	void makeSound(void);
+};
+std::ostream &operator<<(std::ostream &o, const Cat &obj);

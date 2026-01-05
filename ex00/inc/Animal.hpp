@@ -23,7 +23,7 @@ class Animal
 	Animal &operator=(const Animal &other);
 
 	//MEMBER FUNCTION
-	void makeSound(void);
+	virtual void makeSound(void);
 };
 std::ostream &operator<<(std::ostream &o, const Animal &obj);
 
