@@ -6,12 +6,12 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/05 16:01:05 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/01/05 17:58:11 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
-#include "Animal.h"
+#include "color.h"
 #include <iostream>
 
 using std::endl;

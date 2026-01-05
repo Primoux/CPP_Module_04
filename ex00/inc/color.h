@@ -1,5 +1,5 @@
-#ifndef TRAP_H
-# define TRAP_H
+#ifndef COLOR_H
+# define COLOR_H
 
 // Reset
 # define RESET "\033[0m"
@@ -31,4 +31,4 @@
 # define CAT CATCOLOR "<CAT> "
 # define DOG DOGCOLOR "<DOG> "
 
-#endif // !TRAP_H
+#endif // !COLOR_H
