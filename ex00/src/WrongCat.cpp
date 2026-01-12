@@ -1,44 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/12 15:14:38 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/01/12 15:04:12 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 #include "color.h"
 #include <iostream>
 
 using std::endl;
 
-Cat::Cat()
+WrongCat::WrongCat()
 {
-	std::cout << CAT ANIMALCOLOR "Animal:" CATCOLOR "Cat" BGREEN " created" RESET << endl;
-	this->type = "Cat";
+	std::cout << WCAT WANIMALCOLOR "Animal:" WCATCOLOR "WrongCat" BGREEN " created" RESET << endl;
+	this->type = "WrongCat";
 }
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
-	std::cout << CAT << "Cat" BRED " destroyed" RESET  << endl;
+	std::cout << WCAT << "WrongCat" BRED " destroyed" RESET  << endl;
 }
 
-Cat::Cat(const Cat &original)
+WrongCat::WrongCat(const WrongCat &original)
 {
 	this->type = original.type;
 }
 
-Cat &Cat::operator=(const Cat &other)
+WrongCat &WrongCat::operator=(const WrongCat &other)
 {
 	this->type = other.type;
 	return (*this);
 }
 
-void Cat::makeSound(void) const
+void WrongCat::makeSound(void) const
 {
-	std::cout << CATCOLOR "*miaou miaou*" RESET << endl;
+	std::cout << WCATCOLOR "*bark bark*" RESET << endl;
 }

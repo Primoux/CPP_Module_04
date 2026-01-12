@@ -1,50 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/12 15:04:20 by enchevri         ###   ########lyon.fr   */
+/*   Created: 2026/01/12 13:55:42 by enchevri          #+#    #+#             */
+/*   Updated: 2026/01/12 15:04:23 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 #include "color.h"
 #include <iostream>
+#include <string>
 
 using std::cout;
 using std::endl;
-using std::string;
 
-Animal::Animal() : type("Default")
-{
-	cout << ANIMAL "Default Animal" BGREEN " created" RESET << endl;
+WrongAnimal::WrongAnimal() : type("Default")
+{	
+	cout << WANIMAL "Default WrongAnimal" BGREEN " created" RESET << endl;
 }
 
-Animal::~Animal()
+WrongAnimal::~WrongAnimal()
 {
-	cout << ANIMAL << "Default Animal" BRED " destroyed" RESET  << endl;
+	cout << WANIMAL "Default WrongAnimal" BRED " destroyed" RESET << endl;
+
 }
 
-Animal::Animal(const Animal &original)
+WrongAnimal::WrongAnimal(const WrongAnimal &original)
 {
 	this->type = original.type;
 }
 
-Animal &Animal::operator=(const Animal &other)
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
 {
 	this->type = other.type;
 	return (*this);
 }
 
-const string Animal::getType(void) const
+const std::string WrongAnimal::getType(void) const
 {
 	return (this->type);
 }
 
-void Animal::makeSound(void) const
+void WrongAnimal::makeSound(void) const
 {
-	cout << ANIMALCOLOR "*default Animal sound*" RESET << endl;
+	cout << WANIMALCOLOR "*default WrongAnimal sound*" RESET << endl;
 }
