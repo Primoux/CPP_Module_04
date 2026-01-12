@@ -4,12 +4,14 @@
 #include <ostream>
 #include <string>
 
+#define MAX_IDEAS 100
+
 using std::string;
 
 class Brain
 {
   private:
-	string ideas[100];
+	string ideas[MAX_IDEAS];
 
   public:
 	// CONSTRUCTOR

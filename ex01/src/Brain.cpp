@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:30:47 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/12 15:58:12 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/01/12 16:59:47 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int g_brainId = 0;
 Brain::Brain()
 {
 	int id = g_brainId++;
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i < MAX_IDEAS; i++)
 	{
 		std::stringstream ss;
 		ss << "Brain_" << id << "_idea_" << i;
