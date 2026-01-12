@@ -14,8 +14,8 @@ INCLUDES 		= -I $(INCLUDE_DIR)
 
 SRCS			=	src/main.cpp	\
 					src/Animal.cpp \
-# 					src/Cat.cpp \
-# 					src/Dog.cpp
+					src/Cat.cpp \
+					src/Dog.cpp
 
 OBJS			= $(patsubst %.cpp,$(OBJ_DIR)%.o,$(SRCS))
 DEPENDENCIES	= $(OBJS:.o=.d)

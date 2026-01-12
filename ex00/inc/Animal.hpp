@@ -3,7 +3,6 @@
 
 #include <ostream>
 
-using std::string;
 
 class Animal
 {
@@ -11,19 +10,22 @@ class Animal
 
 
   protected:
-	string type;
+	std::string type;
 
   public:
 	// CONSTRUCTOR
 	Animal();
-	~Animal();
+	virtual ~Animal();
 	Animal(const Animal &original);
 
 	// OPERATOR
 	Animal &operator=(const Animal &other);
 
+	//GETTERS
+	const std::string getType(void) const;
+
 	//MEMBER FUNCTION
-	virtual void makeSound(void);
+	virtual void makeSound(void) const;
 };
 std::ostream &operator<<(std::ostream &o, const Animal &obj);
 

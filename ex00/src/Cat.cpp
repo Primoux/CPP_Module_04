@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/05 18:03:23 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/01/12 11:36:02 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ using std::endl;
 
 Cat::Cat()
 {
-	std::cout << CAT "Cat" BGREEN " created" RESET << endl;
+	std::cout << CAT "Cat" BGREEN " created from " ANIMAL RESET << endl;
 	this->type = "Cat";
 }
 
@@ -27,7 +27,7 @@ Cat::~Cat()
 	std::cout << CAT << "Cat" BRED " destroyed" RESET  << endl;
 }
 
-void Cat::makeSound(void)
+void Cat::makeSound(void) const
 {
-	std::cout << CAT "*default sound*";
+	std::cout << CATCOLOR "*miaou miaou*" RESET << endl;
 }

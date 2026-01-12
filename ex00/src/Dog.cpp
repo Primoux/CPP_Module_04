@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/12 11:30:46 by enchevri         ###   ########lyon.fr   */
+/*   Created: 2026/01/12 11:27:42 by enchevri          #+#    #+#             */
+/*   Updated: 2026/01/12 11:34:23 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Dog.hpp"
 #include "color.h"
 #include <iostream>
 
@@ -18,22 +18,19 @@ using std::cout;
 using std::endl;
 using std::string;
 
-Animal::Animal() : type("Default")
+
+Dog::Dog()
 {
-	cout << ANIMAL "DEFAULT ANIMAL" BGREEN " created" RESET << endl;
+	cout << DOG "Dog" BGREEN " created from " ANIMAL RESET << endl;
+	this->type = "Dog";
 }
 
-Animal::~Animal()
+Dog::~Dog()
 {
-	cout << ANIMAL << "DEFAULT ANIMAL" BRED " destroyed" RESET  << endl;
+	cout << DOG << "Dog" BRED " destroyed" RESET  << endl;
 }
 
-const string Animal::getType(void) const
+void Dog::makeSound(void) const
 {
-	return (this->type);
-}
-
-void Animal::makeSound(void) const
-{
-	cout << ANIMAL "*Default Animal sound*" << endl;
+	cout << DOGCOLOR "*bark bark*" RESET << endl;
 }

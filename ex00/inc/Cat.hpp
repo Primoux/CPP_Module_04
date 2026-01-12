@@ -1,7 +1,7 @@
 #include "Animal.hpp"
 #include <ostream>
 
-class Cat : Animal
+class Cat : public Animal
 {
   private:
 	
@@ -16,6 +16,6 @@ class Cat : Animal
 	Cat &operator=(const Cat &other);
 
 	//MEMBER FUNCTION
-	void makeSound(void);
+	void makeSound(void) const;
 };
 std::ostream &operator<<(std::ostream &o, const Cat &obj);
