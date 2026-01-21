@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: enzo <enzo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 11:27:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/12 14:20:58 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/01/21 17:47:33 by enzo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Dog::~Dog()
 	cout << DOG << "Dog" BRED " destroyed" RESET << endl;
 }
 
-Dog::Dog(const Dog &original)
+Dog::Dog(const Dog &original) : Animal(original)
 {
 	this->type = original.type;
 }

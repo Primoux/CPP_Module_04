@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: enzo <enzo@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/12 15:14:38 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/01/21 17:47:32 by enzo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Cat::~Cat()
 	std::cout << CAT << "Cat" BRED " destroyed" RESET  << endl;
 }
 
-Cat::Cat(const Cat &original)
+Cat::Cat(const Cat &original) : Animal(original)
 {
 	this->type = original.type;
 }

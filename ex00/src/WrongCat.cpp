@@ -27,7 +27,7 @@ WrongCat::~WrongCat()
 	std::cout << WCAT << "WrongCat" BRED " destroyed" RESET  << endl;
 }
 
-WrongCat::WrongCat(const WrongCat &original)
+WrongCat::WrongCat(const WrongCat &original) : WrongAnimal(original)
 {
 	this->type = original.type;
 }
