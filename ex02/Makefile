@@ -14,9 +14,7 @@ INCLUDES 		= -I $(INCLUDE_DIR)
 
 SRCS			=	src/main.cpp	\
 					src/Animal.cpp \
-					src/WrongAnimal.cpp \
 					src/Cat.cpp \
-					src/WrongCat.cpp \
 					src/Brain.cpp \
 					src/Dog.cpp
 

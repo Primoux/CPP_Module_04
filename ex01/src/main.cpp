@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:11:32 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/12 17:03:47 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/01 16:31:28 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,8 @@ int	main(void)
 	const Animal	*cat1 = new Cat();
 	const Animal	*cat2 = new Cat();
 
-	std::cout << "The " << cat->getType() << " sound is ";
-	cat->makeSound();
+	std::cout << "The " << cat1->getType() << " sound is ";
+	cat1->makeSound();
 
 	std::cout << BWHITE "Before swap-----------------------------------------" RESET << endl;
 	cat1->lookInside();
@@ -86,8 +86,10 @@ int	main(void)
 	
 	cat2->lookInside();
 	std::cout << BWHITE "After Swap------------------------------------------" RESET << endl;
+	delete cat2;
 	cat2 = cat1;
 
 	cat2->lookInside();
+	delete cat1;
 	return (0);
 }
