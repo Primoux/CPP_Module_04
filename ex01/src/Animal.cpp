@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/01 16:36:45 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/01 16:42:52 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ Animal::Animal() : type("Default")
 	cout << ANIMAL "Default Animal" BGREEN " created" RESET << endl;
 }
 
-Animal::~Animal()
-{
-	cout << ANIMAL << "Default Animal" BRED " destroyed" RESET << endl;
-}
-
 Animal::Animal(const Animal &original)
 {
 	this->type = original.type;
+}
+
+Animal::~Animal()
+{
+	cout << ANIMAL << "Default Animal" BRED " destroyed" RESET << endl;
 }
 
 Animal &Animal::operator=(const Animal &other)

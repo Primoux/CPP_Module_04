@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/01 16:36:45 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/01 16:43:45 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,16 @@ Cat::Cat()
 	this->brain = new Brain();
 }
 
-Cat::~Cat()
-{
-	delete this->brain;
-	cout << CAT << "Cat" BRED " destroyed" RESET  << endl;
-}
-
 Cat::Cat(const Cat &original) : Animal(original)
 {
 	cout << CAT CATCOLOR "Cat" BGREEN " copied" RESET << endl;
 	this->brain = new Brain(*original.brain);
+}
+
+Cat::~Cat()
+{
+	delete this->brain;
+	cout << CAT << "Cat" BRED " destroyed" RESET  << endl;
 }
 
 Cat &Cat::operator=(const Cat &other)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enzo <enzo@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/21 17:47:32 by enzo             ###   ########.fr       */
+/*   Updated: 2026/02/01 16:42:22 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ Cat::Cat()
 	this->type = "Cat";
 }
 
-Cat::~Cat()
-{
-	std::cout << CAT << "Cat" BRED " destroyed" RESET  << endl;
-}
-
 Cat::Cat(const Cat &original) : Animal(original)
 {
 	this->type = original.type;
+}
+
+Cat::~Cat()
+{
+	std::cout << CAT << "Cat" BRED " destroyed" RESET  << endl;
 }
 
 Cat &Cat::operator=(const Cat &other)

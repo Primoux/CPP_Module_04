@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 13:55:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/12 15:04:23 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/01 16:42:34 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@ WrongAnimal::WrongAnimal() : type("Default")
 	cout << WANIMAL "Default WrongAnimal" BGREEN " created" RESET << endl;
 }
 
+WrongAnimal::WrongAnimal(const WrongAnimal &original)
+{
+	this->type = original.type;
+}
+
 WrongAnimal::~WrongAnimal()
 {
 	cout << WANIMAL "Default WrongAnimal" BRED " destroyed" RESET << endl;
 
-}
-
-WrongAnimal::WrongAnimal(const WrongAnimal &original)
-{
-	this->type = original.type;
 }
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)

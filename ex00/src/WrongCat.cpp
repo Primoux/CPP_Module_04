@@ -22,14 +22,14 @@ WrongCat::WrongCat()
 	this->type = "WrongCat";
 }
 
-WrongCat::~WrongCat()
-{
-	std::cout << WCAT << "WrongCat" BRED " destroyed" RESET  << endl;
-}
-
 WrongCat::WrongCat(const WrongCat &original) : WrongAnimal(original)
 {
 	this->type = original.type;
+}
+
+WrongCat::~WrongCat()
+{
+	std::cout << WCAT << "WrongCat" BRED " destroyed" RESET  << endl;
 }
 
 WrongCat &WrongCat::operator=(const WrongCat &other)

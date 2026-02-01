@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:30:47 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/12 16:59:47 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/01 16:43:01 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,17 @@ Brain::Brain()
 	}
 }
 
-Brain::~Brain()
-{
-	cout << BRAIN << "Brain" BRED " destroyed" RESET << endl;
-}
-
 Brain::Brain(const Brain &original)
 {
 	for (int i = 0; i < 100; i++)
 	{
 		this->ideas[i] = original.ideas[i];
 	}
+}
+
+Brain::~Brain()
+{
+	cout << BRAIN << "Brain" BRED " destroyed" RESET << endl;
 }
 
 Brain &Brain::operator=(const Brain &other)

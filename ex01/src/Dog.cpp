@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 11:27:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/01 16:36:45 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/01 16:43:23 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@ Dog::Dog()
 	this->brain = new Brain();
 }
 
-Dog::~Dog()
-{
-	delete this->brain;
-	cout << DOG << "Dog" BRED " destroyed" RESET << endl;
-}
-
 Dog::Dog(const Dog &original) : Animal(original)
 {
 	cout << DOG DOGCOLOR "Dog" BGREEN " copied" RESET << endl;
 	this->brain = new Brain(*original.brain);
+}
+
+Dog::~Dog()
+{
+	delete this->brain;
+	cout << DOG << "Dog" BRED " destroyed" RESET << endl;
 }
 
 Dog &Dog::operator=(const Dog &other)

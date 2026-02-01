@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enzo <enzo@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 11:27:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/21 17:47:33 by enzo             ###   ########.fr       */
+/*   Updated: 2026/02/01 16:42:28 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ Dog::Dog()
 	this->type = "Dog";
 }
 
-Dog::~Dog()
-{
-	cout << DOG << "Dog" BRED " destroyed" RESET << endl;
-}
-
 Dog::Dog(const Dog &original) : Animal(original)
 {
 	this->type = original.type;
+}
+
+Dog::~Dog()
+{
+	cout << DOG << "Dog" BRED " destroyed" RESET << endl;
 }
 
 Dog &Dog::operator=(const Dog &other)
