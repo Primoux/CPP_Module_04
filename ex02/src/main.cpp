@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:11:32 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/16 09:20:50 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/01 16:37:25 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ int	main(void)
 
 	std::cout << "The " << dog->getType() << " sound is ";
 	dog->makeSound();
-	// dog->lookInside();
 
 	delete	dog;
 

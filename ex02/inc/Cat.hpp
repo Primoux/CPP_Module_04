@@ -19,7 +19,7 @@ class Cat : public Animal
 
 	//MEMBER FUNCTION
 	void makeSound(void) const;
-	void lookInside(void) const;
+	void printBrain(void) const;
 
 };
 std::ostream &operator<<(std::ostream &o, const Cat &obj);

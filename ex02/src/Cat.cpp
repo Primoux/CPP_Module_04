@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/12 16:58:11 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/01 16:36:45 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void Cat::makeSound(void) const
 	std::cout << CATCOLOR "*miaou miaou*" RESET << endl;
 }
 
-void Cat::lookInside(void) const
+void Cat::printBrain(void) const
 {
 	for (int i = 0; i < MAX_IDEAS; i++)
 	{

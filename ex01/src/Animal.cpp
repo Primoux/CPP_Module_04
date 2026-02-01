@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/12 16:02:22 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/01 16:36:45 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void Animal::makeSound(void) const
 	cout << ANIMALCOLOR "*default Animal sound*" RESET << endl;
 }
 
-void Animal::lookInside(void) const
+void Animal::printBrain(void) const
 {
 	cout << ANIMAL "No brain inside default Animal" RESET << endl;
 }

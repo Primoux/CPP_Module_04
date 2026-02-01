@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 11:27:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/12 16:58:19 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/01 16:36:45 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void Dog::makeSound(void) const
 	cout << DOGCOLOR "*bark bark*" RESET << endl;
 }
 
-void Dog::lookInside(void) const
+void Dog::printBrain(void) const
 {
 	for (int i = 0; i < MAX_IDEAS; i++)
 	{
