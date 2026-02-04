@@ -40,4 +40,4 @@ clean:
 	rm -rf $(OBJ_DIR)
 
 fclean: clean
-	rm -rf $(NAME) .cache
+	rm -rf $(NAME) 
