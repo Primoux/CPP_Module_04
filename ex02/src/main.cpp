@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:11:32 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 14:32:43 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 14:55:01 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,5 @@ int	main(void)
 	std::cout << BWHITE "Copy destroyed, basic should still work" RESET << endl;
 
 	std::cout << BWHITE "----------------------------------------------------" RESET << endl;
-	Animal animal;
 	return (0);
 }
