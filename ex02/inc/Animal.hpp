@@ -26,7 +26,7 @@ class Animal
 
 	//MEMBER FUNCTION
 	virtual void makeSound(void) const = 0;
-	virtual void printBrain(void) const;
+	virtual void printBrain(void) const = 0;
 
 };
 std::ostream &operator<<(std::ostream &o, const Animal &obj);

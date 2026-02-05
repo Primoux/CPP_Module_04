@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/01 16:43:45 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 14:32:14 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,3 @@ void Cat::printBrain(void) const
 		cout << CAT RESET<< this->brain->getIdea(i) << endl;
 	}
 }
-
