@@ -6,12 +6,11 @@
 
 #define MAX_IDEAS 100
 
-using std::string;
-
 class Brain
 {
   private:
-	string ideas[MAX_IDEAS];
+	std::string _ideas[MAX_IDEAS];
+
 
   public:
 	// CONSTRUCTOR
@@ -23,7 +22,8 @@ class Brain
 	Brain &operator=(const Brain &other);
 
 	//MEMBER FUNCTION
-	const string getIdea(unsigned int index);
+	const std::string getIdea(unsigned int index);
+	void setIdea(const std::string &idea);
 };
 std::ostream &operator<<(std::ostream &o, const Brain &obj);
 

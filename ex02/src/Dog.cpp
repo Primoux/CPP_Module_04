@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 11:27:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/01 16:43:52 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 15:04:10 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,18 @@ Dog::Dog()
 {
 	cout << DOG ANIMALCOLOR "Animal:" DOGCOLOR "Dog" BGREEN " created" RESET << endl;
 	this->type = "Dog";
-	this->brain = new Brain();
+	this->_brain = new Brain();
 }
 
 Dog::Dog(const Dog &original) : Animal(original)
 {
 	cout << DOG DOGCOLOR "Dog" BGREEN " copied" RESET << endl;
-	this->brain = new Brain(*original.brain);
+	this->_brain = new Brain(*original._brain);
 }
 
 Dog::~Dog()
 {
-	delete this->brain;
+	delete this->_brain;
 	cout << DOG << "Dog" BRED " destroyed" RESET << endl;
 }
 
@@ -43,8 +43,8 @@ Dog &Dog::operator=(const Dog &other)
 	{
 		Animal::operator=(other);
 		this->type = other.type;
-		delete this->brain;
-		this->brain = new Brain(*other.brain);
+		delete this->_brain;
+		this->_brain = new Brain(*other._brain);
 	}
 	return (*this);
 }
@@ -58,6 +58,6 @@ void Dog::printBrain(void) const
 {
 	for (int i = 0; i < MAX_IDEAS; i++)
 	{
-		cout << DOG << RESET << this->brain->getIdea(i) << endl;
+		cout << DOG << RESET << this->_brain->getIdea(i) << endl;
 	}
 }

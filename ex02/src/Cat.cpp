@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 14:32:14 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 15:04:15 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,18 @@ Cat::Cat()
 {
 	cout << CAT ANIMALCOLOR "Animal:" CATCOLOR "Cat" BGREEN " created" RESET << endl;
 	this->type = "Cat";
-	this->brain = new Brain();
+	this->_brain = new Brain();
 }
 
 Cat::Cat(const Cat &original) : Animal(original)
 {
 	cout << CAT CATCOLOR "Cat" BGREEN " copied" RESET << endl;
-	this->brain = new Brain(*original.brain);
+	this->_brain = new Brain(*original._brain);
 }
 
 Cat::~Cat()
 {
-	delete this->brain;
+	delete this->_brain;
 	cout << CAT << "Cat" BRED " destroyed" RESET  << endl;
 }
 
@@ -42,8 +42,8 @@ Cat &Cat::operator=(const Cat &other)
 	{
 		Animal::operator=(other);
 		this->type = other.type;
-		delete this->brain;
-		this->brain = new Brain(*other.brain); 
+		delete this->_brain;
+		this->_brain = new Brain(*other._brain); 
 	}
 	return (*this);
 }
@@ -57,6 +57,6 @@ void Cat::printBrain(void) const
 {
 	for (int i = 0; i < MAX_IDEAS; i++)
 	{
-		cout << CAT RESET<< this->brain->getIdea(i) << endl;
+		cout << CAT RESET<< this->_brain->getIdea(i) << endl;
 	}
 }

@@ -3,7 +3,6 @@
 
 #include <ostream>
 
-
 class Animal
 {
   private:
@@ -11,6 +10,7 @@ class Animal
 
   protected:
 	std::string type;
+
 
   public:
 	// CONSTRUCTOR

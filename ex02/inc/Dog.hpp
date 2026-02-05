@@ -5,9 +5,9 @@
 class Dog : public Animal
 {
   private:
-	Brain *brain;
+	Brain *_brain;
 
-	
+
   public:
 	// CONSTRUCTOR
 	Dog();
@@ -20,5 +20,6 @@ class Dog : public Animal
 	//MEMBER FUNCTION
 	void makeSound(void) const;
 	void printBrain(void) const;
+	void setIdea(const std::string &idea);
 };
 std::ostream &operator<<(std::ostream &o, const Dog &obj);
