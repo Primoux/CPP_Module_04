@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:11:32 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 15:13:45 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 15:15:19 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "color.h"
-// #include "WrongCat.hpp"
-// #include "WrongAnimal.hpp"
 #include <iostream>
 
 using std::endl;
