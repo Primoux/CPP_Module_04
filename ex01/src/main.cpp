@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:11:32 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 14:17:35 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 14:20:10 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 
 #define MAX_ANIMAL 10
 using std::endl;
+
 int	main(void)
 {
 	const Animal* animals[MAX_ANIMAL];
