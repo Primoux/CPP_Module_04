@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:11:32 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 14:55:01 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 15:13:45 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,12 @@ using std::endl;
 
 int	main(void)
 {
-	std::cout << BWHITE "----------------------------------------------------" RESET << endl;
-
-
+	/*THIS SHOULD NOT WORK*/
+	// Animal a;
+	// const Animal* meta = new Animal();
+	/**********************/
+	
+	/*BUT THIS SHOULD WORK AS EXPECTED*/
 	const Animal	*dog = new Dog();
 
 	std::cout << "The " << dog->getType() << " sound is ";

@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 15:04:15 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 14:16:41 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,13 @@ Cat::Cat(const Cat &original) : Animal(original)
 
 Cat::~Cat()
 {
-	delete this->_brain;
 	cout << CAT << "Cat" BRED " destroyed" RESET  << endl;
+	delete this->_brain;
 }
 
 Cat &Cat::operator=(const Cat &other)
 {
+	std::cout << DOG "Operator = called for cat" RESET << std::endl;
 	if (this != &other) 
 	{
 		Animal::operator=(other);
@@ -48,9 +49,19 @@ Cat &Cat::operator=(const Cat &other)
 	return (*this);
 }
 
+std::ostream &operator<<(std::ostream &o, const Cat &obj)
+{
+	return (o << obj.getType());
+}
+
 void Cat::makeSound(void) const
 {
 	std::cout << CATCOLOR "*miaou miaou*" RESET << endl;
+}
+
+void Cat::setIdea(const std::string& idea)
+{
+    this->_brain->setIdea(idea);
 }
 
 void Cat::printBrain(void) const
@@ -60,3 +71,4 @@ void Cat::printBrain(void) const
 		cout << CAT RESET<< this->_brain->getIdea(i) << endl;
 	}
 }
+

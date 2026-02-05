@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:30:47 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 15:06:29 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 15:09:33 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ Brain::Brain()
 	for (int i = 0; i < MAX_IDEAS; i++)
 	{
 		std::stringstream ss;
-		ss << "Brain_" << id << "_idea_" << i;
+		ss << "Brain_" << id << "_default_" << i;
 		this->_ideas[i] = ss.str();
 	}
 }
 
 Brain::Brain(const Brain &original)
 {
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i < MAX_IDEAS; i++)
 	{
 		this->_ideas[i] = original._ideas[i];
 	}
@@ -47,9 +47,14 @@ Brain::~Brain()
 
 Brain &Brain::operator=(const Brain &other)
 {
-	for (int i = 0; i < 100; i++)
+	std::cout << BRAIN "Operator = called for Brain" RESET << std::endl;
+
+	if (this != &other)
 	{
-		this->_ideas[i] = other._ideas[i];
+		for (int i = 0; i < MAX_IDEAS; i++)
+		{
+			this->_ideas[i] = other._ideas[i];
+		}
 	}
 	return (*this);
 }

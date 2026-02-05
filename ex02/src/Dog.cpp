@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 11:27:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 15:04:10 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 14:16:46 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,30 @@ Dog::~Dog()
 
 Dog &Dog::operator=(const Dog &other)
 {
+	std::cout << DOG "Operator = called for Dog" RESET << std::endl;
+
 	if (this != &other)
 	{
 		Animal::operator=(other);
-		this->type = other.type;
 		delete this->_brain;
 		this->_brain = new Brain(*other._brain);
 	}
 	return (*this);
 }
 
+std::ostream &operator<<(std::ostream &o, const Dog &obj)
+{
+	return (o << obj.getType());
+}
+
 void Dog::makeSound(void) const
 {
 	cout << DOGCOLOR "*bark bark*" RESET << endl;
+}
+
+void Dog::setIdea(const std::string& idea)
+{
+    this->_brain->setIdea(idea);
 }
 
 void Dog::printBrain(void) const
