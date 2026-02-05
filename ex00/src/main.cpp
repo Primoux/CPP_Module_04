@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:11:32 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 11:30:43 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 12:51:43 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,21 +72,19 @@ int	main(void)
 	std::cout << BWHITE "----------------------------------------------------" RESET << endl;
 
 	std::cout << BBLUE "\n=== Additional Tests with Array ===" RESET << endl;
-	const Animal* animals[4];
+	const Animal* animals[2];
 	animals[0] = new Dog();
 	animals[1] = new Cat();
-	animals[2] = new Dog();
-	animals[3] = new Cat();
 
 	std::cout << "\n" << BWHITE "Testing polymorphism in array:" RESET << endl;
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 2; i++)
 	{
 		std::cout << "Animal[" << i << "] type: " << animals[i]->getType() << " says: ";
 		animals[i]->makeSound();
 	}
 
 	std::cout << "\n" << BWHITE "Deleting animals:" RESET << endl;
-	for (int i = 0; i < 4; i++)
+	for (int i = 0; i < 2; i++)
 	{
 		delete animals[i];
 	}
