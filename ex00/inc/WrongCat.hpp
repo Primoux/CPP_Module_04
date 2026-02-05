@@ -12,8 +12,8 @@ class WrongCat : public WrongAnimal
   public:
 	// CONSTRUCTOR
 	WrongCat();
-	~WrongCat();
 	WrongCat(const WrongCat &original);
+	~WrongCat();
 
 	// OPERATOR
 	WrongCat &operator=(const WrongCat &other);

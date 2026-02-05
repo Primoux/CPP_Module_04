@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 10:02:01 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 11:06:12 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,10 @@ Animal::~Animal()
 
 Animal &Animal::operator=(const Animal &other)
 {
-	this->_type = other._type;
-	return (*this);
+		if (this != &other)
+	{
+		this->_type = other._type;
+	}	return (*this);
 }
 
 const string Animal::getType(void) const

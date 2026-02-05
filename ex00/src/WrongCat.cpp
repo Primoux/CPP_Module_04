@@ -34,8 +34,10 @@ WrongCat::~WrongCat()
 
 WrongCat &WrongCat::operator=(const WrongCat &other)
 {
-	this->_type = other._type;
-	return (*this);
+	if (this != &other)
+	{
+		this->_type = other._type;
+	}	return (*this);
 }
 
 void WrongCat::makeSound(void) const

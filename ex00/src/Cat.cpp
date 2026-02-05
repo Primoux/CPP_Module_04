@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 10:03:01 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 11:05:44 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,10 @@ Cat::~Cat()
 
 Cat &Cat::operator=(const Cat &other)
 {
-	this->_type = other._type;
-	return (*this);
+	if (this != &other)
+	{
+		this->_type = other._type;
+	}	return (*this);
 }
 
 void Cat::makeSound(void) const
