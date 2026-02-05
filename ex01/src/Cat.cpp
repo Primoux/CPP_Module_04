@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/01 16:43:09 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 14:16:41 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,31 +21,37 @@ Cat::Cat()
 {
 	cout << CAT ANIMALCOLOR "Animal:" CATCOLOR "Cat" BGREEN " created" RESET << endl;
 	this->type = "Cat";
-	this->brain = new Brain();
+	this->_brain = new Brain();
 }
 
 Cat::Cat(const Cat &original) : Animal(original)
 {
 	cout << CAT CATCOLOR "Cat" BGREEN " copied" RESET << endl;
-	this->brain = new Brain(*original.brain);
+	this->_brain = new Brain(*original._brain);
 }
 
 Cat::~Cat()
 {
-	delete this->brain;
 	cout << CAT << "Cat" BRED " destroyed" RESET  << endl;
+	delete this->_brain;
 }
 
 Cat &Cat::operator=(const Cat &other)
 {
+	std::cout << DOG "Operator = called for cat" RESET << std::endl;
 	if (this != &other) 
 	{
 		Animal::operator=(other);
 		this->type = other.type;
-		delete this->brain;
-		this->brain = new Brain(*other.brain); 
+		delete this->_brain;
+		this->_brain = new Brain(*other._brain); 
 	}
 	return (*this);
+}
+
+std::ostream &operator<<(std::ostream &o, const Cat &obj)
+{
+	return (o << obj.getType());
 }
 
 void Cat::makeSound(void) const
@@ -53,11 +59,16 @@ void Cat::makeSound(void) const
 	std::cout << CATCOLOR "*miaou miaou*" RESET << endl;
 }
 
+void Cat::setIdea(const std::string& idea)
+{
+    this->_brain->setIdea(idea);
+}
+
 void Cat::printBrain(void) const
 {
-	for (int i = 0; i < MAX_IDEAS; i+=12)
+	for (int i = 0; i < MAX_IDEAS; i++)
 	{
-		cout << CAT RESET<< this->brain->getIdea(i) << endl;
+		cout << CAT RESET<< this->_brain->getIdea(i) << endl;
 	}
 }
 

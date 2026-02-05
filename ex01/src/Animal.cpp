@@ -6,13 +6,14 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/01 16:42:52 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 13:30:16 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "color.h"
 #include <iostream>
+#include <ostream>
 
 using std::cout;
 using std::endl;
@@ -37,6 +38,11 @@ Animal &Animal::operator=(const Animal &other)
 {
 	this->type = other.type;
 	return (*this);
+}
+
+std::ostream &operator<<(std::ostream &o, const Animal &obj)
+{
+	return (o << obj.getType());
 }
 
 const string Animal::getType(void) const
