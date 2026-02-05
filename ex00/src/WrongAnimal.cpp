@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 13:55:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/01 16:42:34 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 10:02:19 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@
 using std::cout;
 using std::endl;
 
-WrongAnimal::WrongAnimal() : type("Default")
+WrongAnimal::WrongAnimal() : _type("Default")
 {	
 	cout << WANIMAL "Default WrongAnimal" BGREEN " created" RESET << endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &original)
 {
-	this->type = original.type;
+	this->_type = original._type;
 }
 
 WrongAnimal::~WrongAnimal()
@@ -36,13 +36,13 @@ WrongAnimal::~WrongAnimal()
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
 {
-	this->type = other.type;
+	this->_type = other._type;
 	return (*this);
 }
 
 const std::string WrongAnimal::getType(void) const
 {
-	return (this->type);
+	return (this->_type);
 }
 
 void WrongAnimal::makeSound(void) const

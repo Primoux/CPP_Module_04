@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/01 16:42:11 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 10:02:01 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ using std::cout;
 using std::endl;
 using std::string;
 
-Animal::Animal() : type("Default")
+Animal::Animal() : _type("Default")
 {
 	cout << ANIMAL "Default Animal" BGREEN " created" RESET << endl;
 }
 
 Animal::Animal(const Animal &original)
 {
-	this->type = original.type;
+	this->_type = original._type;
 }
 
 Animal::~Animal()
@@ -35,13 +35,13 @@ Animal::~Animal()
 
 Animal &Animal::operator=(const Animal &other)
 {
-	this->type = other.type;
+	this->_type = other._type;
 	return (*this);
 }
 
 const string Animal::getType(void) const
 {
-	return (this->type);
+	return (this->_type);
 }
 
 void Animal::makeSound(void) const

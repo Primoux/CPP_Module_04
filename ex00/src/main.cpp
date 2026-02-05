@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:11:32 by enchevri          #+#    #+#             */
-/*   Updated: 2026/01/12 15:13:35 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 09:34:56 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ using std::endl;
 
 int	main(void)
 {
-	std::cout << BWHITE "----------------------------------------------------" RESET << endl;
+	std::cout << BBLUE "\n=== Dog ===" RESET << endl;
 
 
 	const Animal	*dog = new Dog();
@@ -31,6 +31,7 @@ int	main(void)
 	delete	dog;
 
 	std::cout << BWHITE "----------------------------------------------------" RESET << endl;
+	std::cout << BBLUE "\n=== Cat ===" RESET << endl;
 
 
 	const Animal	*cat = new Cat();
@@ -39,6 +40,7 @@ int	main(void)
 	delete	cat;
 
 	std::cout << BWHITE "----------------------------------------------------" RESET << endl;
+	std::cout << BBLUE "\n=== Animal ===" RESET << endl;
 
 
 	const Animal	*meta = new Animal();
@@ -47,6 +49,7 @@ int	main(void)
 	delete	meta;
 
 	std::cout << BWHITE "----------------------------------------------------" RESET << endl;
+	std::cout << BBLUE "\n=== Wrong Animal ===" RESET << endl;
 
 
 	const WrongAnimal	*wrongMeta = new WrongAnimal();
@@ -55,12 +58,42 @@ int	main(void)
 	delete	wrongMeta;
 
 	std::cout << BWHITE "----------------------------------------------------" RESET << endl;
-
+	std::cout << BBLUE "\n=== Wrong Cat ===" RESET << endl;
 
 	const WrongCat	*wrongCat = new WrongCat();
 	std::cout << "The " << wrongCat->getType() << " sound is ";
 	wrongCat->makeSound();
 	delete	wrongCat;
+
+	std::cout << BWHITE "----------------------------------------------------" RESET << endl;
+	std::cout << BBLUE "\n=== *Wrong Cat ===" RESET << endl;
+
+	const WrongAnimal	*wrongAnimalCat = new WrongCat();
+	std::cout << "The " << wrongAnimalCat->getType() << " sound is ";
+	wrongAnimalCat->makeSound();
+	delete	wrongAnimalCat;
+
+	std::cout << BWHITE "----------------------------------------------------" RESET << endl;
+
+	std::cout << BBLUE "\n=== Additional Tests with Array ===" RESET << endl;
+	const Animal* animals[4];
+	animals[0] = new Dog();
+	animals[1] = new Cat();
+	animals[2] = new Dog();
+	animals[3] = new Cat();
+
+	std::cout << "\n" << BWHITE "Testing polymorphism in array:" RESET << endl;
+	for (int i = 0; i < 4; i++)
+	{
+		std::cout << "Animal[" << i << "] type: " << animals[i]->getType() << " says: ";
+		animals[i]->makeSound();
+	}
+
+	std::cout << "\n" << BWHITE "Deleting animals:" RESET << endl;
+	for (int i = 0; i < 4; i++)
+	{
+		delete animals[i];
+	}
 
 	std::cout << BWHITE "----------------------------------------------------" RESET << endl;
 	return (0);

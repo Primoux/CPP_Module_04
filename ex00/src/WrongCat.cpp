@@ -19,12 +19,12 @@ using std::endl;
 WrongCat::WrongCat()
 {
 	std::cout << WCAT WANIMALCOLOR "Animal:" WCATCOLOR "WrongCat" BGREEN " created" RESET << endl;
-	this->type = "WrongCat";
+	this->_type = "WrongCat";
 }
 
 WrongCat::WrongCat(const WrongCat &original) : WrongAnimal(original)
 {
-	this->type = original.type;
+	this->_type = original._type;
 }
 
 WrongCat::~WrongCat()
@@ -34,7 +34,7 @@ WrongCat::~WrongCat()
 
 WrongCat &WrongCat::operator=(const WrongCat &other)
 {
-	this->type = other.type;
+	this->_type = other._type;
 	return (*this);
 }
 

@@ -10,12 +10,12 @@ class WrongAnimal
 
 
   protected:
-	std::string type;
+	std::string _type;
 
   public:
 	// CONSTRUCTOR
 	WrongAnimal();
-	virtual ~WrongAnimal();
+	~WrongAnimal();
 	WrongAnimal(const WrongAnimal &original);
 
 	// OPERATOR
@@ -23,7 +23,7 @@ class WrongAnimal
 
 	//MEMBER FUNCTION
 	const std::string getType(void) const;
-	virtual void makeSound(void) const;
+	void makeSound(void) const;
 };
 std::ostream &operator<<(std::ostream &o, const WrongAnimal &obj);
 

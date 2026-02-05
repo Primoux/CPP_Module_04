@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 11:27:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/01 16:42:28 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/05 10:02:28 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,11 @@ using std::string;
 Dog::Dog()
 {
 	cout << DOG ANIMALCOLOR "Animal:" DOGCOLOR "Dog" BGREEN " created" RESET << endl;
-	this->type = "Dog";
 }
 
 Dog::Dog(const Dog &original) : Animal(original)
 {
-	this->type = original.type;
+	this->_type = original._type;
 }
 
 Dog::~Dog()
@@ -36,7 +35,7 @@ Dog::~Dog()
 
 Dog &Dog::operator=(const Dog &other)
 {
-	this->type = other.type;
+	this->_type = other._type;
 	return (*this);
 }
 
