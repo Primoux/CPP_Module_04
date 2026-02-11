@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 14:16:41 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 10:22:54 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ using std::endl;
 Cat::Cat()
 {
 	cout << CAT ANIMALCOLOR "Animal:" CATCOLOR "Cat" BGREEN " created" RESET << endl;
-	this->type = "Cat";
+	this->_type = "Cat";
 	this->_brain = new Brain();
 }
 
@@ -38,11 +38,10 @@ Cat::~Cat()
 
 Cat &Cat::operator=(const Cat &other)
 {
-	std::cout << DOG "Operator = called for cat" RESET << std::endl;
+	std::cout << CAT "Operator = called for cat" RESET << std::endl;
 	if (this != &other) 
 	{
 		Animal::operator=(other);
-		this->type = other.type;
 		delete this->_brain;
 		this->_brain = new Brain(*other._brain); 
 	}

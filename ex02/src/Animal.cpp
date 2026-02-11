@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/09 15:01:38 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 10:22:54 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,16 @@ using std::cout;
 using std::endl;
 using std::string;
 
-Animal::Animal() : type("Default")
+Animal::Animal() : _type("Default")
 {
 	cout << ANIMAL "Default Animal" BGREEN " created" RESET << endl;
 }
 
 Animal::Animal(const Animal &original)
 {
-	cout << ANIMAL << "Default Animal" BRED " destroyed" RESET << endl;
+	cout << ANIMAL "Copy of the Animal " << original << BGREEN " created" RESET << endl;
 
-	this->type = original.type;
+	this->_type = original._type;
 }
 
 Animal::~Animal()
@@ -38,7 +38,7 @@ Animal::~Animal()
 
 Animal &Animal::operator=(const Animal &other)
 {
-	this->type = other.type;
+	this->_type = other._type;
 	return (*this);
 }
 
@@ -49,7 +49,7 @@ std::ostream &operator<<(std::ostream &o, const Animal &obj)
 
 const string Animal::getType(void) const
 {
-	return (this->type);
+	return (this->_type);
 }
 
 void Animal::makeSound(void) const

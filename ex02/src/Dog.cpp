@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 11:27:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 14:16:46 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 10:22:54 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ using std::string;
 Dog::Dog()
 {
 	cout << DOG ANIMALCOLOR "Animal:" DOGCOLOR "Dog" BGREEN " created" RESET << endl;
-	this->type = "Dog";
+	this->_type = "Dog";
 	this->_brain = new Brain();
 }
 
@@ -33,14 +33,13 @@ Dog::Dog(const Dog &original) : Animal(original)
 
 Dog::~Dog()
 {
-	delete this->_brain;
 	cout << DOG << "Dog" BRED " destroyed" RESET << endl;
+	delete this->_brain;
 }
 
 Dog &Dog::operator=(const Dog &other)
 {
 	std::cout << DOG "Operator = called for Dog" RESET << std::endl;
-
 	if (this != &other)
 	{
 		Animal::operator=(other);
