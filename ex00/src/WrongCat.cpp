@@ -36,6 +36,7 @@ WrongCat::~WrongCat()
 
 WrongCat &WrongCat::operator=(const WrongCat &other)
 {
+	std::cout << ANIMAL "Operator = called for WrongCat" RESET << std::endl;
 	if (this != &other)
 	{
 		this->_type = other._type;

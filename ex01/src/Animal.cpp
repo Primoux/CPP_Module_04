@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 11:08:30 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 11:26:26 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ Animal::~Animal()
 
 Animal &Animal::operator=(const Animal &other)
 {
+	std::cout << ANIMAL "Operator = called for Animal" RESET << std::endl;
 	this->_type = other._type;
 	return (*this);
 }

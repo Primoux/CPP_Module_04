@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 11:22:19 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 11:25:39 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ Cat::~Cat()
 
 Cat &Cat::operator=(const Cat &other)
 {
+	std::cout << CAT "Operator = called for cat" RESET << std::endl;
 	if (this != &other)
 	{
 		this->Animal::operator=(other);

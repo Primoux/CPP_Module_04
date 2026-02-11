@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 13:55:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 11:02:48 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 11:26:25 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ WrongAnimal::~WrongAnimal()
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
 {
+	std::cout << ANIMAL "Operator = called for WrongAnimal" RESET << std::endl;
 	if (this != &other)
 	{
 		this->_type = other._type;
