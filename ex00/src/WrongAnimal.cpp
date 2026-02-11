@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 13:55:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 11:09:35 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 10:05:44 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ WrongAnimal::WrongAnimal() : _type("Default")
 
 WrongAnimal::WrongAnimal(const WrongAnimal &original)
 {
+	std::cout << ANIMAL "Copy of the WrongAnimal " << original << BGREEN " created" RESET << endl;
+
 	this->_type = original._type;
 }
 

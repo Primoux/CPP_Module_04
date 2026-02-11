@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 11:06:12 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 10:05:10 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,24 @@
 #include "color.h"
 #include <iostream>
 
-using std::cout;
 using std::endl;
 using std::string;
 
 Animal::Animal() : _type("Default")
 {
-	cout << ANIMAL "Default Animal" BGREEN " created" RESET << endl;
+	std::cout << ANIMAL "Default Animal" BGREEN " created" RESET << endl;
 }
 
 Animal::Animal(const Animal &original)
 {
+	std::cout << ANIMAL "Copy of the Animal " << original << BGREEN " created" RESET << endl;
+
 	this->_type = original._type;
 }
 
 Animal::~Animal()
 {
-	cout << ANIMAL << "Default Animal" BRED " destroyed" RESET  << endl;
+	std::cout << ANIMAL << "Default Animal" BRED " destroyed" RESET  << endl;
 }
 
 Animal &Animal::operator=(const Animal &other)
@@ -48,5 +49,5 @@ const string Animal::getType(void) const
 
 void Animal::makeSound(void) const
 {
-	cout << ANIMALCOLOR "*default Animal sound*" RESET << endl;
+	std::cout << ANIMALCOLOR "*default Animal sound*" RESET << endl;
 }

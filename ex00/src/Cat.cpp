@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 11:05:44 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 10:05:28 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ Cat::Cat()
 
 Cat::Cat(const Cat &original) : Animal(original)
 {
+	std::cout << ANIMAL "Copy of the Cat " << original << BGREEN " created" RESET << endl;
+
 	this->_type = original._type;
 }
 

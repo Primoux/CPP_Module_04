@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 11:27:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 11:05:39 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 10:05:25 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ Dog::Dog()
 
 Dog::Dog(const Dog &original) : Animal(original)
 {
+	std::cout << ANIMAL "Copy of the Dog " << original << BGREEN " created" RESET << endl;
 	this->_type = original._type;
 }
 

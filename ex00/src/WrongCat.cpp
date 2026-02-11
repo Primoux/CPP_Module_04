@@ -24,6 +24,8 @@ WrongCat::WrongCat()
 
 WrongCat::WrongCat(const WrongCat &original) : WrongAnimal(original)
 {
+	std::cout << ANIMAL "Copy of the WrongCat " << original << BGREEN " created" RESET << endl;
+
 	this->_type = original._type;
 }
 
