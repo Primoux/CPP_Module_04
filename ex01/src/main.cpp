@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:11:32 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/05 14:35:59 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 11:35:57 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main(void)
 	for (int i = 0; i < MAX_ANIMAL; i++)
 	{
 		std::cout << BGREEN << i << " The animal " << *animals[i] << RESET << endl;
-		animals[i]->printBrain();
+		animals[i]->printBrain(0);
 	}
 	std::cout << BWHITE "---------------------------------------------------" RESET << endl;
 	for (int i = 0;i < MAX_ANIMAL; i++)
@@ -48,13 +48,13 @@ int	main(void)
 	Dog dog2;
 	dog1.setIdea("no");
 	std::cout << BWHITE "Should be no---------------------------------------------------" RESET << endl;
-	dog1.printBrain();
+	dog1.printBrain(0);
 	dog2 = dog1;
 	dog1.setIdea("yes");
 	std::cout << BWHITE "Should be yes---------------------------------------------------" RESET << endl;
-	dog1.printBrain();
+	dog1.printBrain(0);
 	std::cout << BWHITE "Should be no---------------------------------------------------" RESET << endl;
-	dog2.printBrain();
+	dog2.printBrain(0);
 
 	return (0);
 }

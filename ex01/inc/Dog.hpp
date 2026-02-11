@@ -22,7 +22,7 @@ class Dog : public Animal
 
 	//MEMBER FUNCTION
 	void makeSound(void) const;
-	void printBrain(void) const;
+	void printBrain(unsigned int i) const;
 	void setIdea(const std::string &idea);
 };
 std::ostream &operator<<(std::ostream &o, const Dog &obj);

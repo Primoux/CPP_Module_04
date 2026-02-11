@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 11:27:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 11:22:01 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 11:34:42 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,7 @@ void Dog::setIdea(const string& idea)
     this->_brain->setIdea(idea);
 }
 
-void Dog::printBrain(void) const
+void Dog::printBrain(unsigned int i) const
 {
-	for (int i = 0; i < MAX_IDEAS; i++)
-	{
-		std::cout << DOG RESET << this->_brain->getIdea(i) << endl;
-	}
+	std::cout << DOG RESET << this->_brain->getIdea(i) << endl;
 }

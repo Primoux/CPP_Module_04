@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 11:22:07 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 11:34:44 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,11 +63,8 @@ void Cat::setIdea(const string& idea)
     this->_brain->setIdea(idea);
 }
 
-void Cat::printBrain(void) const
+void Cat::printBrain(unsigned int i) const
 {
-	for (int i = 0; i < MAX_IDEAS; i++)
-	{
-		std::cout << CAT RESET<< this->_brain->getIdea(i) << endl;
-	}
+	std::cout << CAT RESET<< this->_brain->getIdea(i) << endl;
 }
 
