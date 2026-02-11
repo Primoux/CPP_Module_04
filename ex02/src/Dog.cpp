@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 11:27:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 11:32:45 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 11:39:35 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 using std::endl;
 using std::string;
 
-Dog::Dog()
+Dog::Dog() : Animal()
 {
 	std::cout << DOG ANIMALCOLOR "Animal:" DOGCOLOR "Dog" BGREEN " created" RESET << endl;
 	this->_type = "Dog";
