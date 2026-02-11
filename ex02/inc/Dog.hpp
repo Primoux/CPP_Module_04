@@ -1,3 +1,6 @@
+#ifndef DOG_HPP
+#define DOG_HPP
+
 #include "Animal.hpp"
 #include "Brain.hpp"
 #include <ostream>
@@ -23,3 +26,5 @@ class Dog : public Animal
 	void setIdea(const std::string &idea);
 };
 std::ostream &operator<<(std::ostream &o, const Dog &obj);
+
+#endif // !DOG_HPP

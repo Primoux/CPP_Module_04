@@ -2,6 +2,7 @@
 #define ANIMAL_HPP
 
 #include <ostream>
+#include <string>
 
 
 class Animal

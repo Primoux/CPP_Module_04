@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 09:52:37 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 10:06:13 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ Animal::Animal() : _type("Default")
 
 Animal::Animal(const Animal &original)
 {
+	std::cout << ANIMAL "Copy of the Animal " << original << BGREEN " created" RESET << endl;
+
 	this->_type = original._type;
 }
 

@@ -1,3 +1,6 @@
+#ifndef CAT_HPP
+#define CAT_HPP
+
 #include "Animal.hpp"
 #include "Brain.hpp"
 #include <ostream>
@@ -24,3 +27,5 @@ class Cat : public Animal
 
 };
 std::ostream &operator<<(std::ostream &o, const Cat &obj);
+
+#endif // !CAT_HPP
