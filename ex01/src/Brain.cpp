@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:30:47 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 10:00:24 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 11:04:25 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <ostream>
 #include <sstream>
 
-using std::cout;
+
 using std::endl;
 using std::string;
 
@@ -24,7 +24,7 @@ static int gBrainId = 0;
 
 Brain::Brain()
 {
-	cout << BRAIN "Default Brain" BGREEN " created" RESET << endl;
+	std::cout << BRAIN "Default Brain" BGREEN " created" RESET << endl;
 	this->_id = gBrainId++;
 	for (int i = 0; i < MAX_IDEAS; i++)
 	{
@@ -36,7 +36,7 @@ Brain::Brain()
 
 Brain::Brain(const Brain &original)
 {
-	cout << BRAIN << "Copy of the brain " RESET << original << BGREEN " created" RESET << endl;
+	std::cout << BRAIN << "Copy of the brain " RESET << original << BGREEN " created" RESET << endl;
 
 	this->_id = original._id;
 	for (int i = 0; i < MAX_IDEAS; i++)
@@ -47,7 +47,7 @@ Brain::Brain(const Brain &original)
 
 Brain::~Brain()
 {
-	cout << BRAIN << "Brain " << *this <<  BRED " destroyed" RESET << endl;
+	std::cout << BRAIN << "Brain " << *this <<  BRED " destroyed" RESET << endl;
 }
 
 std::ostream &operator<<(std::ostream &o, const Brain &obj)

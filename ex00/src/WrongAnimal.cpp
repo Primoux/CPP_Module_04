@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 13:55:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 10:08:03 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 11:02:48 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,11 @@
 #include <iostream>
 #include <string>
 
-using std::cout;
 using std::endl;
 
 WrongAnimal::WrongAnimal() : _type("Default")
 {	
-	cout << WANIMAL "Default WrongAnimal" BGREEN " created" RESET << endl;
+	std::cout << WANIMAL "Default WrongAnimal" BGREEN " created" RESET << endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &original)
@@ -32,7 +31,7 @@ WrongAnimal::WrongAnimal(const WrongAnimal &original)
 
 WrongAnimal::~WrongAnimal()
 {
-	cout << WANIMAL "Default WrongAnimal" BRED " destroyed" RESET << endl;
+	std::cout << WANIMAL "Default WrongAnimal" BRED " destroyed" RESET << endl;
 
 }
 
@@ -56,5 +55,5 @@ const std::string WrongAnimal::getType(void) const
 
 void WrongAnimal::makeSound(void) const
 {
-	cout << WANIMALCOLOR "*default WrongAnimal sound*" RESET << endl;
+	std::cout << WANIMALCOLOR "*default WrongAnimal sound*" RESET << endl;
 }
