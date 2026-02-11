@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 11:27:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 10:16:04 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 11:12:50 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 using std::endl;
 using std::string;
 
-Dog::Dog()
+Dog::Dog() : Animal()
 {
 	std::cout << DOG ANIMALCOLOR "Animal:" DOGCOLOR "Dog" BGREEN " created" RESET << endl;
 	this->_type = "Dog";
@@ -58,7 +58,7 @@ void Dog::makeSound(void) const
 	std::cout << DOGCOLOR "*bark bark*" RESET << endl;
 }
 
-void Dog::setIdea(const std::string& idea)
+void Dog::setIdea(const string& idea)
 {
     this->_brain->setIdea(idea);
 }

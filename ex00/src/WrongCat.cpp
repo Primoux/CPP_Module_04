@@ -16,7 +16,7 @@
 
 using std::endl;
 
-WrongCat::WrongCat()
+WrongCat::WrongCat() : WrongAnimal()
 {
 	std::cout << WCAT WANIMALCOLOR "Animal:" WCATCOLOR "WrongCat" BGREEN " created" RESET << endl;
 	this->_type = "WrongCat";

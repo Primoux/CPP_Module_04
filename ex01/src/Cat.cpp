@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 10:22:54 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 11:13:09 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 #include <iostream>
 
 using std::endl;
+using std::string;
 
-Cat::Cat()
+Cat::Cat() : Animal()
 {
 	std::cout << CAT ANIMALCOLOR "Animal:" CATCOLOR "Cat" BGREEN " created" RESET << endl;
 	this->_type = "Cat";
@@ -37,7 +38,7 @@ Cat::~Cat()
 
 Cat &Cat::operator=(const Cat &other)
 {
-	std::cout << CAT "Operator = called for cat" RESET << std::endl;
+	std::cout << CAT "Operator = called for cat" RESET << endl;
 	if (this != &other) 
 	{
 		Animal::operator=(other);
@@ -57,7 +58,7 @@ void Cat::makeSound(void) const
 	std::cout << CATCOLOR "*miaou miaou*" RESET << endl;
 }
 
-void Cat::setIdea(const std::string& idea)
+void Cat::setIdea(const string& idea)
 {
     this->_brain->setIdea(idea);
 }

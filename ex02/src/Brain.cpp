@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:30:47 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 11:04:47 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 11:11:40 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ std::ostream &operator<<(std::ostream &o, const Brain &obj)
 
 Brain &Brain::operator=(const Brain &other)
 {
-	std::cout << BRAIN "Operator = called for Brain" RESET << std::endl;
+	std::cout << BRAIN "Operator = called for Brain" RESET << endl;
 
 	if (this != &other)
 	{

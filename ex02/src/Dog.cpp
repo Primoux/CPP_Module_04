@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 11:27:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 11:03:44 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 11:11:47 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ Dog::~Dog()
 
 Dog &Dog::operator=(const Dog &other)
 {
-	std::cout << DOG "Operator = called for Dog" RESET << std::endl;
+	std::cout << DOG "Operator = called for Dog" RESET << endl;
 	if (this != &other)
 	{
 		Animal::operator=(other);
