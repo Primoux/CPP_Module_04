@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 10:05:10 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 10:07:39 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Animal::Animal() : _type("Default")
 
 Animal::Animal(const Animal &original)
 {
-	std::cout << ANIMAL "Copy of the Animal " << original << BGREEN " created" RESET << endl;
+	std::cout << ANIMAL "Copy of the Animal " RESET << original << BGREEN " created" RESET << endl;
 
 	this->_type = original._type;
 }
@@ -40,6 +40,11 @@ Animal &Animal::operator=(const Animal &other)
 	{
 		this->_type = other._type;
 	}	return (*this);
+}
+
+std::ostream &operator<<(std::ostream &o, const Animal &obj)
+{
+	return (o << obj.getType());
 }
 
 const string Animal::getType(void) const

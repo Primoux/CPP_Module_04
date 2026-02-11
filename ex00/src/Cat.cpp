@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 10:05:28 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 10:08:11 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Cat::Cat()
 
 Cat::Cat(const Cat &original) : Animal(original)
 {
-	std::cout << ANIMAL "Copy of the Cat " << original << BGREEN " created" RESET << endl;
+	std::cout << ANIMAL "Copy of the Cat " RESET << original << BGREEN " created" RESET << endl;
 
 	this->_type = original._type;
 }
@@ -40,6 +40,11 @@ Cat &Cat::operator=(const Cat &other)
 	{
 		this->_type = other._type;
 	}	return (*this);
+}
+
+std::ostream &operator<<(std::ostream &o, const Cat &obj)
+{
+	return (o << obj.getType());
 }
 
 void Cat::makeSound(void) const
