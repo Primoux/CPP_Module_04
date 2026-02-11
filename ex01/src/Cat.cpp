@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 10:09:53 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 10:16:02 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ Cat &Cat::operator=(const Cat &other)
 	if (this != &other) 
 	{
 		Animal::operator=(other);
-		this->_type = other._type;
 		delete this->_brain;
 		this->_brain = new Brain(*other._brain); 
 	}
