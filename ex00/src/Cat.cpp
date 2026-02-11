@@ -6,11 +6,12 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 10:13:40 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 11:22:19 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
+#include "Animal.hpp"
 #include "color.h"
 #include <iostream>
 
@@ -38,8 +39,9 @@ Cat &Cat::operator=(const Cat &other)
 {
 	if (this != &other)
 	{
-		this->_type = other._type;
-	}	return (*this);
+		this->Animal::operator=(other);
+	}	
+	return (*this);
 }
 
 std::ostream &operator<<(std::ostream &o, const Cat &obj)

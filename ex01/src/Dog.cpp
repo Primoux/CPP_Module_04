@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 11:27:42 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 11:12:50 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 11:22:01 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ Dog &Dog::operator=(const Dog &other)
 	std::cout << DOG "Operator = called for Dog" RESET << std::endl;
 	if (this != &other)
 	{
-		Animal::operator=(other);
+		this->Animal::operator=(other);
 		delete this->_brain;
 		this->_brain = new Brain(*other._brain);
 	}

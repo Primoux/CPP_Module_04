@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 15:13:00 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 10:07:39 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 11:22:25 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,11 @@ Animal::~Animal()
 
 Animal &Animal::operator=(const Animal &other)
 {
-		if (this != &other)
+	if (this != &other)
 	{
 		this->_type = other._type;
-	}	return (*this);
+	}	
+	return (*this);
 }
 
 std::ostream &operator<<(std::ostream &o, const Animal &obj)
