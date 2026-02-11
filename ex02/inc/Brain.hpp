@@ -9,8 +9,8 @@
 class Brain
 {
   private:
-	std::string _ideas[MAX_IDEAS];
-
+	std::string 	_ideas[MAX_IDEAS];
+	unsigned int 	_id;
 
   public:
 	// CONSTRUCTOR
@@ -22,8 +22,11 @@ class Brain
 	Brain &operator=(const Brain &other);
 
 	//MEMBER FUNCTION
-	const std::string getIdea(unsigned int index);
-	void setIdea(const std::string &idea);
+	const std::string	getIdea(unsigned int index);
+	void 				setIdea(const std::string &idea);
+	unsigned int 		getId(void) const;
+	
+
 };
 std::ostream &operator<<(std::ostream &o, const Brain &obj);
 

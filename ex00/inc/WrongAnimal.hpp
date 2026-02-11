@@ -15,7 +15,7 @@ class WrongAnimal
   public:
 	// CONSTRUCTOR
 	WrongAnimal();
-	~WrongAnimal();
+	virtual ~WrongAnimal();
 	WrongAnimal(const WrongAnimal &original);
 
 	// OPERATOR
