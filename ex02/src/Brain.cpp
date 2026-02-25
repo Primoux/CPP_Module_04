@@ -6,7 +6,7 @@
 /*   By: enchevri <enchevri@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/12 15:30:47 by enchevri          #+#    #+#             */
-/*   Updated: 2026/02/11 11:11:40 by enchevri         ###   ########lyon.fr   */
+/*   Updated: 2026/02/11 13:55:21 by enchevri         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,11 +71,10 @@ Brain &Brain::operator=(const Brain &other)
 
 void Brain::setIdea(const string &idea)
 {
-	int id = gBrainId++;
 	for (int i = 0;i < MAX_IDEAS; i++)
 	{
 		std::stringstream ss;
-		ss << "Brain_" << id << "_" << idea << "_" << i;
+		ss << "Brain_" << *this << "_" << idea << "_" << i;
 		this->_ideas[i] = ss.str();
 	}
 }
